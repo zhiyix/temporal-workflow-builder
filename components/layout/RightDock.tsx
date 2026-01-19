@@ -9,15 +9,13 @@ interface RightDockProps {
 }
 
 const RightDock: React.FC<RightDockProps> = ({ activeTab, setActiveTab, children }) => {
-  const getPanelWidth = () => {
-    if (activeTab === 'globals') return 'w-1/2 min-w-[650px]';
-    return 'w-[480px]';
-  };
+  // 统一面板宽度：使用原先最宽的 globals 面板配置
+  const panelWidthClass = 'w-1/2 min-w-[650px]';
 
   return (
     <div className="flex shrink-0 h-full">
       {/* Active Panel Container */}
-      <div className={`${getPanelWidth()} border-l border-[#dcdcdc] overflow-hidden transition-all duration-300 ease-in-out bg-white flex flex-col shadow-[-4px_0_15px_rgba(0,0,0,0.02)]`}>
+      <div className={`${panelWidthClass} border-l border-[#dcdcdc] overflow-hidden transition-all duration-300 ease-in-out bg-white flex flex-col shadow-[-4px_0_15px_rgba(0,0,0,0.02)]`}>
         {children}
       </div>
 
