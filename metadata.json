@@ -1,0 +1,5 @@
+{
+  "name": "Temporal Workflow Builder",
+  "description": "A high-end visual workflow orchestrator for generating Go Temporal code. Features drag-and-drop nodes, real-time property editing, and instant Go code generation based on a structured DSL.",
+  "requestFramePermissions": []
+}
